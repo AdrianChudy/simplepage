@@ -35,6 +35,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
 }
 
 .header .header__menu-item li {
@@ -227,6 +228,12 @@ body {
 .main .main__article .main__img {
   float: left;
   padding: 1.5% 4% 2% 0;
+}
+
+@media (max-width: 500px) {
+  .main .main__article .main__img {
+    float: none;
+  }
 }
 
 .main .main__article .main__text {
