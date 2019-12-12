@@ -1,0 +1,239 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1170px;
+
+  @media (max-width: 700px) {
+    display: block;
+  }
+}
+.header {
+  padding: 10px 0;
+  border-bottom: 1px solid lightgrey;
+  .flex {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__menu-item {
+    display: flex;
+
+    li {
+      list-style-type: none;
+    }
+    a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #000;
+      text-transform: uppercase;
+    }
+    a:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.flex {
+  display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.baner {
+  background-image: url(../img/baner.jpg);
+  background-size: cover;
+  height: 50vh;
+  background-position: center;
+  position: relative;
+
+  .baner__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 6.5em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+
+    @media (max-width: 1440px) {
+      font-size: 5.8em;
+    }
+    @media (max-width: 1350px) {
+      font-size: 5.5em;
+    }
+    @media (max-width: 1150px) {
+      font-size: 3em;
+    }
+    @media (max-width: 500px) {
+      font-size: 1.8em;
+    }
+    @media (max-width: 375px) {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.main {
+  margin-top: 4%;
+  min-height: 100vh;
+
+  .main__total h2 {
+    text-align: center;
+    font-size: 5em;
+
+    @media (max-width: 768px) {
+      font-size: 2em;
+    }
+  }
+
+  .main__box {
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+    margin: 20px;
+    position: relative;
+    border: 4px solid grey;
+    cursor: pointer;
+
+    @media (max-width: 1440px) {
+      width: 250px;
+      height: 250px;
+    }
+    @media (max-width: 768px) {
+      width: 150px;
+      height: 150px;
+    }
+
+    .power__one,
+    .power__two {
+      font-size: 4em;
+      position: absolute;
+      bottom: -200px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 2em;
+        bottom: -100px;
+      }
+    }
+  }
+  .main__box--one {
+    background: linear-gradient(rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.3) 100%), url(../img/millennium-falcon.png);
+  }
+  .main__box--two {
+    background: linear-gradient(rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.3) 100%), url(../img/lightsaber.jpg);
+  }
+  .power {
+    justify-content: space-around;
+    min-height: 600px;
+  }
+  .main__article {
+    position: relative;
+    flex: 1;
+    transition: all 1s ease;
+    padding: 0 1%;
+
+    .main__title {
+      font-size: 2em;
+    }
+
+    .main__title--first {
+      color: #02b9fc;
+    }
+
+    .main__title--second {
+      color: #ffcc2d;
+    }
+
+    .main__title--third {
+      color: #ff5b5b;
+    }
+
+    .main__img {
+      float: left;
+      padding: 1.5% 4% 2% 0;
+    }
+
+    .main__text {
+      text-align: left;
+    }
+
+    .main__text--hidden {
+      z-index: -1;
+      transition: all 0.5s ease;
+      position: absolute;
+      bottom: 10px;
+      opacity: 0;
+    }
+
+    .show {
+      position: relative;
+      opacity: 1;
+      bottom: 0;
+    }
+
+    .main__more {
+      color: #c5c5c5;
+      transition: all 0.5s ease;
+      width: 30%;
+      margin-left: auto;
+      text-align: right;
+      display: block;
+
+      @media (max-width: 1350px) {
+        width: 40%;
+      }
+    }
+
+    .main__more:hover {
+      cursor: pointer;
+    }
+
+    .main__more--first:hover {
+      color: #02b9fc;
+    }
+
+    .main__more--second:hover {
+      color: #ffcc2d;
+    }
+
+    .main__more--third:hover {
+      color: #ff5b5b;
+    }
+
+    @media (max-width: 768px) {
+      min-height: auto;
+
+      .main__title {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+.border {
+  border: 4px solid green !important;
+}
+.footer {
+  margin-top: 2%;
+  padding: 3% 0;
+  background-color: #666;
+  color: #c5c5c5;
+
+  .footer__copyrights {
+    text-align: center;
+  }
+}
